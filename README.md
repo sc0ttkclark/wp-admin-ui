@@ -4,6 +4,8 @@ A PHP class to build Admin interfaces within the WordPress Dashboard -- includes
 
 ## Features
 
+There are actions and filters all over to enable extending functionality.
+
 ### Data sources
 
 * Custom array of data
@@ -11,12 +13,25 @@ A PHP class to build Admin interfaces within the WordPress Dashboard -- includes
 
 ### Table lists
 
-Similar to WP_List_Table but not an extension of it, WP Admin UI provides functionality that allows for:
+This functionality is ssimilar to WP_List_Table but not an extension of it.
 
 * Creating a list table of data
 * Sorting of any column (SQL mode only)
 * Filtering of any column (SQL mode only)
 * Pagination of data
+* Delete items in table
+* Reorder items in table
+* Custom actions
+
+### Add / Edit / Duplicate / View screens
+
+This functionality is similar to the post editor but not an extension of it.
+
+* Add new item
+* Edit item
+* Duplicate existing item with add new form
+* View item
+* Custom actions
 
 ### Exports
 
@@ -28,3 +43,14 @@ Similar to WP_List_Table but not an extension of it, WP Admin UI provides functi
 * JSON - JSON format
 * PDF - PDF printer friendly views, using [TCPDF](https://tcpdf.org/)
 * Custom - Custom delimiter separated Values (Update the report screen URL parameters to `&action=export&export_type=custom&export_delimiter=#` and change # to whatever delimiter you want)
+
+### Column type support
+
+* Text
+* Date
+* Time
+* Date + Time
+* Related (via table of data)
+* Boolean (checkbox / yes+no)
+* Number (1,234
+* Decimal (234.99)
